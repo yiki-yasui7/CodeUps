@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.navi {
+  background-color: #408f95;
+  color: #fff;
+  margin-top: 100px;
+  margin: auto;
+}
+
+.navi__inner {
+  padding: 0 rem(15);
+}
+
+.navi__header {
+  padding-top: rem(48);
+  padding-bottom: rem(40);
+  @include mq("md") {
+    display: flex;
+    padding-bottom: rem(29);
+    padding-top: rem(80);
+  }
+}
+
+.navi__logo {
+  width: rem(120);
+  margin-bottom: rem(16);
+  @include mq("md") {
+    width: rem(200);
+  }
+}
+
+.navi-icon {
+  display: flex;
+  @include mq("md") {
+    margin-left: rem(40);
+    margin-top: rem(38);
+  }
+}
+
+.navi-icon__link {
+  width: rem(24);
+  margin-right: rem(14);
+}
+
+.navi__items {
+  margin-bottom: rem(40);
+}
+
+.navi__item--top {
+  position: relative;
+  line-height: 1;
+  padding-left: 20px;
+  font-weight: $bold;
+  font-family: $base-font-family;
+  letter-spacing: 0.05em;
+  line-height: calc(18 / 16);
+  margin-bottom: rem(24);
+}
+
+.navi__item {
+  margin-bottom: rem(24);
+  margin-left: rem(18);
+}
+
+.navi__item--top::before {
+  /* 基本的に変更しないプロパティ */
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: rem(18);
+
+  /* アイコンとテキストの間隔を調整するプロパティ */
+  left: 0px;
+
+  /* アイコンの上下位置を調整するプロパティ */
+  transform: translateY(-50%);
+
+  /* アイコンのサイズを調整するプロパティ */
+  width: 1em;
+  height: 1em;
+
+  /* 表示させるアイコンのパスを指定 */
+  background-image: url(/assets/images/common/starfish.png);
+}
+
+.navi__menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(16);
+  @include mq("md") {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.navi__box--a {
+  order: 1;
+}
+
+.navi__box--b {
+  order: 3;
+}
+
+.navi__box--c {
+  order: 2;
+}
+
+.navi__box--d {
+  order: 4;
+}
+
+.navi__item {
+  font-size: rem(16);
+}
+
+.navi__menu {
+  @include mq("md") {
+    padding-bottom: rem(80);
+  }
+}

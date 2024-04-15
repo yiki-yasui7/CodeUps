@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.swiper-slide {
+  width: 100%;
+  max-width: rem(280);
+}
+
+.swiper-container {
+  padding: 0 20px; //左右の余白はcontainerに指定する
+}
+.swiper-wrapper {
+  padding: 30px 0;
+}
+
+.swiper {
+  padding-right: 10vh;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  bottom: 0;
+  content: "";
+  height: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  border-bottom: 20px solid transparent;
+  border-right: 30px solid #ff4500;
+  border-top: 20px solid transparent;
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #ff4500;
+  border-top: 20px solid transparent;
+}

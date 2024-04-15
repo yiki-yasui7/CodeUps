@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.footer__copyright {
+  text-align: center;
+  margin-top: rem(40);
+  color: $white;
+  font-family: $english-family;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  padding-bottom: rem(56);
+  @include mq("md") {
+    font-size: rem(14);
+    padding-bottom: rem(80);
+  }
+}

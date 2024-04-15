@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.aboutus {
+  margin-top: rem(80);
+  margin-bottom: 500px;
+}
+
+.aboutus__body {
+  margin-top: rem(24);
+}
+
+.aboutus__inner {
+  width: 100%;
+  max-width: 1110px;
+  padding: 0 rem(15);
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.aboutus__image {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.aboutus__image--dog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 128 / 194;
+  overflow: hidden;
+  width: 37.10144%;
+  align-self: center;
+}
+
+.aboutus__image--dog img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutus__image--ocean {
+  position: absolute;
+  top: rem(26);
+  left: rem(64);
+  bottom: rem(18);
+  z-index: -1;
+  aspect-ratio: 281 / 186;
+  overflow: hidden;
+  width: 81.4492%;
+}
+
+.aboutus__image--ocean img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutus__text-header {
+  font-family: $english-family;
+  font-size: rem(40);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: $blue;
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+    color: #fff;
+  }
+}
+
+.aboutus__text-body {
+  font-size: rem(16);
+  letter-spacing: 0.05em;
+  line-height: calc(24 / 16);
+  margin-top: rem(16);
+  @include mq("md") {
+    color: #fff;
+    margin-top: 0;
+  }
+}

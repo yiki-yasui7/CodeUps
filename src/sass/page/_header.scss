@@ -1,0 +1,126 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: rem(80);
+  background-color: #0d2936;
+  z-index: 10;
+  opacity: 0.68;
+  @include mq("md") {
+    height: rem(90);
+  }
+}
+
+.header__inner {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rem(15);
+  @include mq("md") {
+    padding-left: rem(62);
+    padding-right: 0;
+  }
+}
+
+.header-logo {
+  width: rem(102);
+  position: relative;
+  z-index: 999;
+  @include mq("md") {
+    width: rem(133);
+  }
+}
+
+.header__sp-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #408f95;
+  width: 100%;
+  height: 100vh;
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.header-sp-nav__items {
+  height: 100vh;
+  padding-top: 25rem;
+  padding-bottom: 10rem;
+  overflow: scroll;
+  z-index: 2;
+}
+
+.header-pc-nav {
+  height: inherit;
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.header-pc-nav__content {
+  margin-right: rem(30);
+}
+
+.header-pc-nav__items {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header-pc-nav__item {
+  height: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.header-pc-nav__item a {
+  height: inherit;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // ↑3つを指定することでクリック領域が広がる
+  margin-right: rem(20);
+  margin-left: rem(20);
+  padding-bottom: rem(4);
+  font-size: rem(10);
+  line-height: 1;
+  position: relative;
+}
+
+.header-pc-nav__item a::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  /*線の形状*/
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  /*アニメーションの指定*/
+  transition: all 0.3s;
+  transform: scale(0, 1); /*X方向0、Y方向1*/
+  transform-origin: center top; /*上部中央基点*/
+}
+
+.header-pc-nav__item.current a::after,
+.header-pc-nav__item a:hover::after {
+  transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+
+.header-pc-nav__item span {
+  font-size: rem(18);
+  margin-bottom: rem(4);
+  font-family: $english-family;
+}

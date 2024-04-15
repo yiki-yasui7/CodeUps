@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.carditem__body {
+  margin-top: rem(24);
+}
+
+.carditem__img {
+  aspect-ratio: 345 / 227;
+  overflow: hidden;
+}
+
+.carditem__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carditem__title {
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: calc(24 / 20);
+  letter-spacing: 0.05em;
+  padding-bottom: rem(4);
+  border-bottom: 1px solid $blue;
+  color: $black;
+}
+
+.carditem__text {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  color: $black;
+  letter-spacing: 0.05em;
+  margin-top: rem(8);
+}
+
+.carditem__button {
+  text-align: center;
+  margin-top: rem(40);
+}

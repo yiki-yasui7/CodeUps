@@ -1,0 +1,95 @@
+@use "global" as *;
+
+.button {
+  display: inline-block;
+  padding: rem(16) rem(35);
+  background-color: $blue;
+  color: $white;
+  font-family: $english-family;
+  font-size: rem(14);
+  letter-spacing: 0.05em;
+  position: relative;
+  cursor: pointer;
+  width: rem(202);
+  transition: 0.3s;
+  background: linear-gradient(90deg, #fff 0%, #fff 50%, $blue 50%, $blue 100%);
+  background-size: 200% auto;
+  background-position: 100%;
+}
+
+.button:hover {
+  background-position: 0%;
+  color: $blue;
+  border: 1px solid $blue;
+}
+
+.button::after {
+  content: "";
+  border: 1px solid $blue;
+  position: absolute;
+  top: 4px;
+  right: -4px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.button.slide::after {
+  background: #ff701e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.button.slide:hover {
+  color: #fff;
+}
+.button.slide:hover::after {
+  transform: scale(1, 1);
+}
+
+.button__arrow {
+  margin-left: rem(8);
+  background-color: #fff;
+}
+
+.button__arrow::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 35px;
+  transform: translateY(calc(-50% - 2px)) rotate(30deg);
+  width: rem(15);
+  height: rem(1);
+  background-color: #fff;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.button__arrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  width: rem(40);
+  height: rem(1);
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.button__arrow:hover::before,
+.button__arrow:hover::after {
+  background-color: #408f95; /* ホバー時の矢印の色（青） */
+}
+
+.button__slide:hover .button__arrow::before,
+.button__slide:hover .button__arrow::after {
+  background-color: #408f95; /* ホバー時の背景色（オレンジ） */
+}

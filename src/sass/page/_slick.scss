@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.slick__bg {
+  height: 100vh;
+  width: 100%;
+  padding-bottom: 16.5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+}
+
+.slick__bg01 {
+  background-image: url(/assets/images/common/PC-mv1.jpg);
+}
+
+.slick__bg02 {
+  background-image: url(/assets/images/common/PC-mv2.jpg);
+}
+
+.slick__bg03 {
+  background-image: url(/assets/images/common/PC-mv3.jpg);
+}
+.slick__bg04 {
+  background-image: url(/assets/images/common/PC-mv4.jpg);
+}
