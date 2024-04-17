@@ -2,8 +2,6 @@
 
 .section-header {
   text-align: center;
-  margin-top: 200px;
-  //   mtあとで消す
 }
 
 .section-header__entitle {
@@ -35,4 +33,31 @@
   @include mq("md") {
     margin-top: rem(8);
   }
+}
+
+.section-header--contact {
+  text-align: center;
+}
+
+.section-header__entitle--contact {
+  font-size: rem(80);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  font-family: $english-family;
+  font-weight: 300;
+}
+
+.section-header__entitle--contact::first-letter {
+  color: $blue;
+}
+
+.section-header__jatitle--contact {
+  font-size: rem(12);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: calc(18 / 12);
+  font-family: $english-family;
+  font-weight: 300;
+  color: $blue;
 }
