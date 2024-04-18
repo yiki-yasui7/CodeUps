@@ -1,11 +1,25 @@
 @use "global" as *;
 
 .contact {
-  margin-top: rem(80);
+  padding-top: rem(80);
 }
 
 .contact__inner {
   padding: 0 rem(15) 0 rem(30);
+  position: relative;
+}
+.contact__inner::before {
+  background: url(/assets/images/common/contact-back.png) no-repeat top /
+    contain;
+
+  content: "";
+  display: block;
+  top: -3.5rem;
+  height: 11.3125rem;
+  position: absolute;
+  // right: calc(50% - min(48.4vw, 20.625rem));
+  width: 12.125rem;
+  z-index: 4;
 }
 
 .contact__wrapper {

@@ -11,16 +11,16 @@ jQuery(function ($) {
     }
   });
 
-  $(".slick").slick({
-    fade: true,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    arrows: false,
-    dots: false,
-  });
+  // $(".slick").slick({
+  //   fade: true,
+  //   autoplay: true,
+  //   speed: 2000,
+  //   autoplaySpeed: 2000,
+  //   pauseOnFocus: false,
+  //   pauseOnHover: false,
+  //   arrows: false,
+  //   dots: false,
+  // });
 
   // ページネーション、戻るボタン、進むボタンをcampaignに適用
   var campaignSwiper = new Swiper(".js-campaign-swiper", {
@@ -42,6 +42,17 @@ jQuery(function ($) {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+  });
+
+  var swiper = new Swiper(".js-mv-swiper", {
+    loop: true,
+    slidesPerView: "auto",
+    autoplay: { delay: 2000 },
+    pagination: {
+      el: ".mv-pagination",
+    },
+    clickable: true,
+    loop: true,
   });
 
   //要素の取得とスピードの設定
@@ -96,5 +107,29 @@ jQuery(function ($) {
       "swing"
     );
     return false;
+  });
+
+  $(document).ready(function () {
+    // 画像切り替えの関数を定義
+    function switchImage() {
+      // 現在のウィンドウ幅を取得
+      var windowWidth = $(window).width();
+      // ウィンドウ幅が指定の幅より小さい場合はスマホ用画像を表示、そうでない場合はPC用画像を表示
+      if (windowWidth < 768) {
+        $(".price__img--sp").show();
+        $(".price__img--pc").hide();
+      } else {
+        $(".price__img--sp").hide();
+        $(".price__img--pc").show();
+      }
+    }
+
+    // 初期表示時に画像切り替えの関数を実行
+    switchImage();
+
+    // ウィンドウサイズが変更されたときに画像切り替えの関数を実行
+    $(window).resize(function () {
+      switchImage();
+    });
   });
 });

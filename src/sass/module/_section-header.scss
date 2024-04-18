@@ -7,10 +7,10 @@
 .section-header__entitle {
   font-size: rem(32);
   font-weight: bold;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
   line-height: calc(40 / 32);
   font-family: $english-family;
-  font-weight: 300;
+  font-weight: 500;
   @include mq(md) {
     font-size: rem(40);
   }
@@ -23,15 +23,15 @@
 .section-header__jatitle {
   font-size: rem(12);
   font-weight: 300;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.042em;
   line-height: calc(18 / 12);
   color: $blue;
   font-family: $base-font-family;
   font-weight: 400;
-  margin-top: rem(4);
+  margin-top: rem(8);
 
   @include mq("md") {
-    margin-top: rem(8);
+    margin-top: rem(2);
   }
 }
 
@@ -42,7 +42,7 @@
 .section-header__entitle--contact {
   font-size: rem(80);
   font-weight: bold;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
   line-height: 1;
   font-family: $english-family;
   font-weight: 300;
@@ -55,9 +55,45 @@
 .section-header__jatitle--contact {
   font-size: rem(12);
   font-weight: bold;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   line-height: calc(18 / 12);
   font-family: $english-family;
   font-weight: 300;
   color: $blue;
+}
+
+.section-header__entitle--white {
+  font-size: rem(32);
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  line-height: calc(40 / 32);
+  font-family: $english-family;
+  font-weight: 500;
+  @include mq(md) {
+    font-size: rem(40);
+    color: #fff;
+  }
+}
+
+.section-header__entitle--white::first-letter {
+  color: $blue;
+  @include mq("md") {
+    color: #fff;
+  }
+}
+
+.section-header__jatitle--white {
+  font-size: rem(12);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: calc(18 / 12);
+  color: $blue;
+  font-family: $base-font-family;
+  font-weight: 400;
+  margin-top: rem(4);
+
+  @include mq("md") {
+    margin-top: rem(8);
+    color: #fff;
+  }
 }

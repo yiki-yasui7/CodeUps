@@ -1,8 +1,8 @@
 @use "global" as *;
 
-.carditem__body {
-  margin-top: rem(24);
-}
+// .carditem__body {
+//   margin-top: rem(24);
+// }
 
 .carditem__img {
   aspect-ratio: 345 / 227;
@@ -19,18 +19,27 @@
   font-size: rem(20);
   font-weight: $bold;
   line-height: calc(24 / 20);
-  letter-spacing: 0.05em;
-  padding-bottom: rem(4);
+  letter-spacing: 0.01em;
+  padding-bottom: rem(2);
   border-bottom: 1px solid $blue;
   color: $black;
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: 1;
+    padding-bottom: rem(8);
+  }
 }
 
 .carditem__text {
   font-size: rem(16);
   line-height: calc(24 / 16);
   color: $black;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
   margin-top: rem(8);
+  font-weight: 400;
+  @include mq("md") {
+    letter-spacing: 0.005em;
+  }
 }
 
 .carditem__button {

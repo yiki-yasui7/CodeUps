@@ -2,14 +2,42 @@
 
 .voice {
   padding-top: rem(140);
+  padding-bottom: rem(140);
 }
 
-.voice::before {
+.voice__inner {
+  position: relative;
+}
+
+.voice__inner::before {
   @include mq("md") {
-    background-image: url(/assets/images/common/voice_fish.png);
-    bottom: -10rem;
-    width: rem(301);
-    height: rem(138);
+    background: url(/assets/images/common/voice_fish.png) no-repeat top /
+      contain;
+
+    content: "";
+    display: block;
+    top: -10rem;
+    height: 11.3125rem;
+    position: absolute;
+    left: calc(50% - min(48.4vw, 39.625rem));
+    width: 12.125rem;
+    z-index: 4;
+  }
+}
+
+.voice__inner::after {
+  @include mq("md") {
+    background: url(/assets/images/common/voice_tatu.png) no-repeat top /
+      contain;
+
+    content: "";
+    display: block;
+    bottom: -5.5625rem;
+    height: 11.3125rem;
+    position: absolute;
+    right: calc(50% - min(48.4vw, 39.625rem));
+    width: 12.125rem;
+    z-index: 4;
   }
 }
 

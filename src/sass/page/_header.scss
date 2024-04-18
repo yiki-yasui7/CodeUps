@@ -6,11 +6,19 @@
   left: 0;
   right: 0;
   height: rem(80);
-  background-color: #0d2936;
+  width: 100%;
+  background-color: rgba(13, 41, 54, 0.68);
   z-index: 10;
-  opacity: 0.68;
+  // opacity: 0.68;
   @include mq("md") {
     height: rem(90);
+  }
+}
+
+.header__inner.inner {
+  max-width: rem(375);
+  @include mq("md") {
+    max-width: rem(1440);
   }
 }
 
@@ -20,14 +28,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 rem(15);
+
   @include mq("md") {
-    padding-left: rem(62);
+    padding-left: rem(36);
     padding-right: 0;
   }
 }
 
 .header-logo {
-  width: rem(102);
+  width: rem(100);
   position: relative;
   z-index: 999;
   @include mq("md") {
@@ -41,9 +50,11 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #408f95;
+
+  background-color: rgba(64, 143, 149, 1);
   width: 100%;
   height: 100vh;
+  z-index: 11;
 
   @include mq("md") {
     display: none;
@@ -67,7 +78,7 @@
 }
 
 .header-pc-nav__content {
-  margin-right: rem(30);
+  margin-right: rem(20);
 }
 
 .header-pc-nav__items {
@@ -86,12 +97,12 @@
   height: inherit;
   color: #fff;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   // ↑3つを指定することでクリック領域が広がる
-  margin-right: rem(20);
-  margin-left: rem(20);
+  flex-direction: column;
+  padding-right: rem(20);
+  padding-left: rem(20);
   padding-bottom: rem(4);
   font-size: rem(10);
   line-height: 1;
