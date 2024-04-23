@@ -7,11 +7,12 @@
 .mv__header {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: rem(50);
   color: $white;
   z-index: 5;
   text-align: center;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   @include mq(md) {
     width: 100%;
     left: 50%;
@@ -33,10 +34,10 @@
 }
 .mv__subtitle {
   font-size: rem(20);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   line-height: 1;
-  margin-top: rem(14);
-  margin-left: rem(3);
+  margin-top: rem(10);
+  margin-left: rem(5);
   font-family: $english-family;
   @include mq("md") {
   }

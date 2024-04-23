@@ -3,7 +3,7 @@
 .blog {
   margin-top: rem(83);
   @include mq("md") {
-    background-image: url(/assets/images/common/blog-back.png);
+    background: url(../images/common/blog-back.png);
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: contain;

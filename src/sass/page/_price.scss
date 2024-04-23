@@ -1,9 +1,15 @@
 @use "global" as *;
 
 .price {
+  margin-top: rem(80);
   background-color: #ddf0f1;
   padding-top: rem(80);
   padding-bottom: rem(80);
+  @include mq("md") {
+    margin-top: 0;
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
 }
 
 .price__inner {
@@ -14,15 +20,14 @@
 
 .price__inner::after {
   @include mq("md") {
-    background: url(/assets/images/common/price-back.png) no-repeat top /
-      contain;
-    bottom: -5.5625rem;
+    background: url(../images/common/price-back.png) no-repeat top / contain;
+    bottom: -6.5625rem;
     content: "";
     display: block;
-    height: 11.3125rem;
+    height: 16.3125rem;
     position: absolute;
-    left: calc(50% - min(48.4vw, 39.625rem));
-    width: 12.125rem;
+    left: calc(50% - min(48.4vw, 38.625rem));
+    width: 27.67rem;
     z-index: 4;
   }
 }
@@ -32,6 +37,7 @@
   @include mq("md") {
     display: flex;
     flex-direction: row-reverse;
+    margin-top: rem(40);
   }
 }
 
@@ -77,7 +83,11 @@
 }
 
 .price-menu__wrapper:first-child {
-  margin-top: 0;
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: 0;
+  }
 }
 
 .price-menu__wrapper + .price-menu__wrapper {
@@ -103,6 +113,12 @@
   line-height: calc(24 / 14);
   margin-top: rem(8);
   color: $black;
+  @include mq("md") {
+    letter-spacing: 0.01em;
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    font-weight: 500;
+  }
 }
 
 .price-menu__price {
@@ -110,9 +126,18 @@
   line-height: calc(24 / 14);
   margin-top: rem(8);
   color: $black;
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    letter-spacing: 0.01em;
+    font-weight: 500;
+  }
 }
 
 .price__button {
   text-align: center;
-  margin-top: rem(56);
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }

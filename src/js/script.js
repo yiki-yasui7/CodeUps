@@ -11,17 +11,6 @@ jQuery(function ($) {
     }
   });
 
-  // $(".slick").slick({
-  //   fade: true,
-  //   autoplay: true,
-  //   speed: 2000,
-  //   autoplaySpeed: 2000,
-  //   pauseOnFocus: false,
-  //   pauseOnHover: false,
-  //   arrows: false,
-  //   dots: false,
-  // });
-
   // ページネーション、戻るボタン、進むボタンをcampaignに適用
   var campaignSwiper = new Swiper(".js-campaign-swiper", {
     clickable: true,

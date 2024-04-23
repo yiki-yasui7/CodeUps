@@ -19,7 +19,7 @@
 .swiper-button {
   @include mq("md") {
     position: absolute;
-    top: rem(-18);
+    top: -1rem;
     right: rem(18);
     z-index: 5;
     width: rem(260);
@@ -41,7 +41,7 @@
   @include mq("md") {
     display: block;
     content: "";
-    background-image: url(/assets/images/common/swiper-button-prev.png);
+    background-image: url(../images/common/swiper-button-prev.png);
     background-size: cover;
     width: rem(80);
     height: rem(80);
@@ -55,7 +55,7 @@
   @include mq("md") {
     display: block;
     content: "";
-    background-image: url(/assets/images/common/swiper-button-next.png);
+    background-image: url(../images/common/swiper-button-next.png);
     background-size: cover;
     width: rem(80);
     height: rem(80);
@@ -64,12 +64,11 @@
 }
 
 .swiper-slide--mv {
-  height: calc(100vh - rem(156));
+  height: 100vh;
   width: 100%;
   aspect-ratio: 375 / 667;
   overflow: hidden;
   @include mq("md") {
-    height: calc(100vh - rem(50));
     aspect-ratio: 1440 / 768;
   }
 }
