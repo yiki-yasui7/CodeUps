@@ -3,6 +3,7 @@
 .swiper-slide--campain {
   width: 100%;
   max-width: rem(280);
+  height: auto;
   @include mq("md") {
     max-width: rem(333);
   }
@@ -11,7 +12,6 @@
 .swiper-container {
   margin-right: calc(50% - 50vw);
   overflow: hidden;
-  // padding-right: 10vh;
 }
 
 /* 前への矢印カスタマイズ */

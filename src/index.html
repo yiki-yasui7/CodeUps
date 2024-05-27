@@ -9,6 +9,9 @@
     <title>DIVING into the ocean</title>
     <meta
       name="description"
+      npx
+      gulp
+      build
       content="当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。
       正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
     "
@@ -248,14 +251,14 @@
       <section class="campaign">
         <div class="campaign__inner inner">
           <div class="campaign__title section-header">
-            <h2 class="section-header__entitle">Campaign</h2>
-            <p class="section-header__jatitle">キャンペーン</p>
+            <p class="section-header__entitle">Campaign</p>
+            <h2 class="section-header__jatitle">キャンペーン</h2>
           </div>
-          <div class="campaign__items swiper-container card-list">
+          <div class="campaign__items swiper-container">
             <div class="swiper js-campaign-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide--campain">
-                  <a href="#" class="card-list__item campaign-card">
+              <div class="swiper-wrapper campaign__flexes">
+                <div class="swiper-slide swiper-slide--campain campaign__flex">
+                  <a href="#" class="campaign-card">
                     <figure class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign1.jpg"
@@ -267,7 +270,9 @@
                         <div class="campaign-card__category">
                           ライセンス講習
                         </div>
-                        <div class="campaign-card__title">ライセンス取得</div>
+                        <div class="campaign-card__title">
+                          ライセンス取得ライセンス取得ライセンス取得ライセンス取得ライセンス取得
+                        </div>
                       </div>
                       <div class="campaign-card__footer">
                         <p class="campaign-card__text">
@@ -283,8 +288,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="swiper-slide swiper-slide--campain">
-                  <a href="#" class="card-list__item campaign-card">
+                <div class="swiper-slide swiper-slide--campain campaign__flex">
+                  <a href="#" class="campaign-card">
                     <figure class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign2.jpg"
@@ -314,8 +319,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="swiper-slide swiper-slide--campain">
-                  <a href="#" class="card-list__item campaign-card">
+                <div class="swiper-slide swiper-slide--campain campaign__flex">
+                  <a href="#" class="campaign-card">
                     <figure class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign3.jpg"
@@ -343,8 +348,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="swiper-slide swiper-slide--campain">
-                  <a href="#" class="card-list__item campaign-card">
+                <div class="swiper-slide swiper-slide--campain campaign__flex">
+                  <a href="#" class="campaign-card">
                     <figure class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign4.jpg"
@@ -383,7 +388,7 @@
             </div>
           </div>
           <div class="campaign__button">
-            <a href="#" class="button button__slide"
+            <a href="" class="button button__slide"
               >View more <span class="button__arrow"></span
             ></a>
           </div>
@@ -393,8 +398,8 @@
       <section class="aboutus">
         <div class="aboutus__inner inner">
           <div class="aboutus__header section-header">
-            <h2 class="section-header__entitle">About us</h2>
-            <p class="section-header__jatitle">私たちについて</p>
+            <p class="section-header__entitle">About us</p>
+            <h2 class="section-header__jatitle">私たちについて</h2>
           </div>
           <div class="aboutus__body">
             <div class="aboutus__image">
@@ -430,8 +435,8 @@
       <section class="information">
         <div class="information__inner inner">
           <div class="information__header section-header">
-            <h2 class="section-header__entitle">Information</h2>
-            <p class="section-header__jatitle">ダイビング情報</p>
+            <p class="section-header__entitle">Information</p>
+            <h2 class="section-header__jatitle">ダイビング情報</h2>
           </div>
           <div class="information__body">
             <div class="carditem information__card">
@@ -458,68 +463,55 @@
       <section class="blog">
         <div class="blog__inner inner">
           <div class="section-header">
-            <h2 class="section-header__entitle--white">Blog</h2>
-            <p class="section-header__jatitle--white">ブログ</p>
+            <p class="section-header__entitle--white">Blog</p>
+            <h2 class="section-header__jatitle--white">ブログ</h2>
           </div>
-          <div class="blog__items">
-            <div class="blog__item">
-              <a href="" class="carditem blog__card">
-                <div class="colorbox blog__img">
-                  <img
-                    src="./assets/images/common/blog1.jpg"
-                    alt="イソギンチャク"
-                  />
+          <div class="blog__items carditem-list">
+            <a href="" class="carditem blog__card">
+              <div class="colorbox blog__img">
+                <img
+                  src="./assets/images/common/blog1.jpg"
+                  alt="イソギンチャク"
+                />
+              </div>
+              <div class="carditem__body blog__textbody">
+                <time datetime="2023-11-17" class="blog__date">2023.11/17</time>
+                <div class="blog__title">ライセンス取得</div>
+                <div class="blog__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                 </div>
-                <div class="carditem__body blog__textbody">
-                  <time datetime="2023-11-17" class="blog__date"
-                    >2023.11/17</time
-                  >
-                  <div class="blog__title">ライセンス取得</div>
-                  <div class="blog__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                  </div>
+              </div>
+            </a>
+            <a href="#" class="blog__item carditem blog__card">
+              <div class="colorbox blog__img">
+                <img src="./assets/images/common/blog2.jpg" alt="亀" />
+              </div>
+              <div class="carditem__body blog__textbody">
+                <time datetime="2023-11-17" class="blog__date">2023.11/17</time>
+                <div class="blog__title">ウミガメと泳ぐ</div>
+                <div class="blog__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                 </div>
-              </a>
-            </div>
-            <div class="blog__item">
-              <a href="#" class="carditem blog__card">
-                <div class="colorbox blog__img">
-                  <img src="./assets/images/common/blog2.jpg" alt="亀" />
+              </div>
+            </a>
+            <a href="#" class="carditem blog__card">
+              <div class="colorbox blog__img">
+                <img
+                  src="./assets/images/common/blog3.jpg"
+                  alt="カクレクマノミ"
+                />
+              </div>
+              <div class="carditem__body blog__textbody">
+                <time datetime="2023-11-17" class="blog__date">2023.11/17</time>
+                <div class="blog__title">カクレクマノミ</div>
+                <div class="blog__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                 </div>
-                <div class="carditem__body blog__textbody">
-                  <time datetime="2023-11-17" class="blog__date"
-                    >2023.11/17</time
-                  >
-                  <div class="blog__title">ウミガメと泳ぐ</div>
-                  <div class="blog__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="blog__item">
-              <a href="#" class="carditem blog__card">
-                <div class="colorbox blog__img">
-                  <img
-                    src="./assets/images/common/blog3.jpg"
-                    alt="カクレクマノミ"
-                  />
-                </div>
-                <div class="carditem__body blog__textbody">
-                  <time datetime="2023-11-17" class="blog__date"
-                    >2023.11/17</time
-                  >
-                  <div class="blog__title">カクレクマノミ</div>
-                  <div class="blog__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                  </div>
-                </div>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
           <div class="blog__button">
             <a href="#" class="button button__slide"
@@ -532,11 +524,11 @@
       <section class="voice">
         <div class="voice__inner inner">
           <div class="section-header">
-            <h2 class="section-header__entitle">Voice</h2>
-            <p class="section-header__jatitle">お客様の声</p>
+            <p class="section-header__entitle">Voice</p>
+            <h2 class="section-header__jatitle">お客様の声</h2>
           </div>
           <div class="voice__items">
-            <div class="card-list__item voice-card">
+            <div class="voice-card">
               <div class="voice-card__body">
                 <div class="voice-card__header">
                   <div class="voice-card__info">
@@ -561,7 +553,7 @@
                 </div>
               </div>
             </div>
-            <div class="card-list__item voice-card">
+            <div class="voice-card">
               <div class="voice-card__body">
                 <div class="voice-card__header">
                   <div class="voice-card__info">
@@ -598,8 +590,8 @@
       <section class="price">
         <div class="price__inner inner">
           <div class="section-header">
-            <h2 class="section-header__entitle">Price</h2>
-            <p class="section-header__jatitle">料金一覧</p>
+            <p class="section-header__entitle">Price</p>
+            <h2 class="section-header__jatitle">料金一覧</h2>
           </div>
           <div class="price__wrapper">
             <div class="colorbox price__img">
@@ -731,8 +723,8 @@
             </div>
             <div class="contact__footer">
               <div class="section-header--contact">
-                <h2 class="section-header__entitle--contact">Contact</h2>
-                <p class="section-header__jatitle--contact">お問い合わせ</p>
+                <p class="section-header__entitle--contact">Contact</p>
+                <h2 class="section-header__jatitle--contact">お問い合わせ</h2>
                 <p class="contact__footer-text">ご予約・お問い合わせはコチラ</p>
               </div>
               <div class="contact__button">
@@ -810,12 +802,16 @@
                   <a href="">お客様の声</a>
                 </li>
               </ul>
-              <ul class="footer-navi__items">
+              <ul class="footer-navi__items--right">
                 <li class="footer-navi__item--top">
                   <a href="">料金一覧</a>
                 </li>
-                <li class="footer-navi__item"><a href="">ライセンス講習</a></li>
-                <li class="footer-navi__item"><a href="">体験ダイビング</a></li>
+                <li class="footer-navi__item">
+                  <a href="#">ライセンス講習</a>
+                </li>
+                <li class="footer-navi__item">
+                  <a href="#">体験ダイビング</a>
+                </li>
                 <li class="footer-navi__item--last">
                   <a href="">ファンダイビング</a>
                 </li>
@@ -827,17 +823,17 @@
                   <a href="">よくある質問</a>
                 </li>
               </ul>
-              <ul class="footer-navi__items">
+              <ul class="footer-navi__items--right">
                 <li class="footer-navi__item--top">
                   <a href="">プライバシー<br class="u-mobile" />ポリシー</a>
                 </li>
               </ul>
-              <ul class="footer-navi__items">
+              <ul class="footer-navi__items--right">
                 <li class="footer-navi__item--top">
                   <a href="">利用規約</a>
                 </li>
               </ul>
-              <ul class="footer-navi__items">
+              <ul class="footer-navi__items--right">
                 <li class="footer-navi__item--top">
                   <a href="">お問い合わせ</a>
                 </li>

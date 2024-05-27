@@ -13,6 +13,7 @@
 }
 
 .price__inner {
+  max-width: rem(600);
   @include mq("md") {
     position: relative;
   }
@@ -125,6 +126,7 @@
   font-size: rem(14);
   line-height: calc(24 / 14);
   margin-top: rem(8);
+  margin-left: rem(16);
   color: $black;
   @include mq("md") {
     font-size: rem(16);

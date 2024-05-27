@@ -5,15 +5,17 @@
   color: #fff;
   margin-top: 100px;
   margin: auto;
+  @include mq("md") {
+    display: none;
+  }
 }
 
 .navi__inner {
   padding-top: rem(5);
-  margin-right: rem(15);
+  padding-right: rem(15);
   padding-bottom: rem(15);
   padding-left: rem(15);
   height: 100%;
-  overflow: scroll;
 }
 
 .navi__header {
@@ -28,7 +30,7 @@
 
 .navi__logo {
   width: rem(120);
-  margin-bottom: rem(16);
+  padding-bottom: rem(16);
   @include mq("md") {
     width: rem(200);
   }
@@ -47,10 +49,6 @@
   margin-right: rem(14);
 }
 
-.navi__items {
-  margin-bottom: rem(40);
-}
-
 .navi__item--top {
   position: relative;
   line-height: 1;
@@ -59,7 +57,7 @@
   font-family: $base-font-family;
   letter-spacing: 0.05em;
   line-height: calc(18 / 16);
-  margin-bottom: rem(26);
+  padding-bottom: rem(26);
 }
 
 .navi__item {
@@ -68,7 +66,7 @@
   font-family: $base-font-family;
   letter-spacing: 0.01em;
   line-height: calc(18 / 16);
-  margin-bottom: rem(24);
+  padding-bottom: rem(24);
   font-size: rem(16);
 }
 
@@ -76,7 +74,7 @@
   /* 基本的に変更しないプロパティ */
   content: "";
   position: absolute;
-  top: 50%;
+  top: 25%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -100,10 +98,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-
+  padding-bottom: rem(250);
+  overflow: scroll;
+  height: 100vh;
   @include mq("md") {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+.navi-content {
+  max-height: rem(220);
 }
 
 .navi__box--a {

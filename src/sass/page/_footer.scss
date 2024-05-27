@@ -9,6 +9,9 @@
 
 .footer-navi__inner {
   padding: 0 rem(16);
+  @include mq("md") {
+    padding: 0 rem(25);
+  }
 }
 
 .footer-navi__header {
@@ -23,7 +26,7 @@
 
 .footer-navi__logo {
   width: rem(120);
-  margin-bottom: rem(16);
+
   @include mq("md") {
     width: rem(200);
   }
@@ -31,6 +34,7 @@
 
 .footer-navi-icon {
   display: flex;
+  margin-top: rem(16);
   @include mq("md") {
     margin-left: rem(40);
     margin-top: rem(38);
@@ -45,11 +49,19 @@
   }
 }
 
+.footer-navi-icon__link:hover {
+  opacity: 0.7;
+}
+
 .footer-navi__items {
   margin-top: rem(36);
 }
 .footer-navi__items--no {
   margin-top: 0;
+}
+
+.footer-navi__items--right {
+  margin-top: rem(16);
 }
 
 .footer-navi__item--top {
@@ -60,31 +72,38 @@
   font-family: $base-font-family;
   letter-spacing: 0.05em;
   line-height: calc(18 / 16);
-  margin-bottom: rem(28);
+  padding-bottom: rem(28);
 }
 
-.footer-navi__item--top-second {
-  position: relative;
-  line-height: 1;
-  padding-left: 20px;
-  font-weight: $bold;
-  font-family: $base-font-family;
-  letter-spacing: 0.05em;
-  line-height: calc(18 / 16);
-  margin-bottom: rem(25);
+.footer-navi__item--top:hover {
+  opacity: 0.5;
 }
 
-.footer-navi__item--top-secondprice {
-  margin-top: rem(40);
+.footer-navi__item--top::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: rem(16);
+  left: 0px;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  background-image: url(../images/common/starfish.png);
 }
 
 .footer-navi__item {
   padding-bottom: rem(24);
-
   margin-left: rem(22);
   font-weight: 300;
   font-size: rem(16);
   line-height: calc(18 / 16);
+}
+
+.footer-navi__item:hover {
+  opacity: 0.5;
 }
 
 .footer-navi__item--last {
@@ -95,28 +114,8 @@
   line-height: calc(18 / 16);
 }
 
-.footer-navi__item--top::before {
-  /* 基本的に変更しないプロパティ */
-  content: "";
-  position: absolute;
-  top: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-right: rem(16);
-
-  /* アイコンとテキストの間隔を調整するプロパティ */
-  left: 0px;
-
-  /* アイコンの上下位置を調整するプロパティ */
-  transform: translateY(-50%);
-
-  /* アイコンのサイズを調整するプロパティ */
-  width: 1em;
-  height: 1em;
-
-  /* 表示させるアイコンのパスを指定 */
-  background-image: url(../images/common/starfish.png);
+.footer-navi__item--last:hover {
+  opacity: 0.5;
 }
 
 .footer-navi__menu {
@@ -125,8 +124,7 @@
   gap: rem(8);
   @include mq("md") {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    margin-top: rem(10);
+    margin-top: rem(24);
   }
 }
 
@@ -163,7 +161,7 @@
 
 .footer__copyright {
   text-align: center;
-  margin-top: rem(30);
+  margin-top: rem(12);
   color: $white;
   font-family: $english-family;
   font-size: rem(12);
@@ -171,10 +169,11 @@
   line-height: 1;
   letter-spacing: 0.05em;
   padding-bottom: rem(56);
+  padding-top: rem(20);
   @include mq("md") {
     font-size: rem(14);
     padding-bottom: rem(80);
-    padding-top: rem(20);
+    padding-top: rem(40);
     letter-spacing: 0.08em;
   }
 }
