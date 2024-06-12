@@ -1,10 +1,9 @@
 @use "global" as *;
 
-.voice {
-  padding-top: rem(82);
+.voice__space {
+  margin-top: rem(82);
   @include mq("md") {
-    padding-top: rem(140);
-    padding-bottom: rem(145);
+    margin-top: rem(140);
   }
 }
 
@@ -43,10 +42,11 @@
 
 .voice__items {
   margin-top: rem(40);
+  gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
   @include mq("md") {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
     max-width: rem(1080);
   }
 }

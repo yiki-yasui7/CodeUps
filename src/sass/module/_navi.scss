@@ -51,6 +51,9 @@
 
 .navi__item--top {
   position: relative;
+}
+
+.navi__item--top a {
   line-height: 1;
   padding-left: 20px;
   font-weight: $bold;
@@ -58,9 +61,11 @@
   letter-spacing: 0.05em;
   line-height: calc(18 / 16);
   padding-bottom: rem(26);
+  display: block;
 }
 
-.navi__item {
+.navi__item a {
+  display: block;
   margin-left: rem(18);
   font-weight: 300;
   font-family: $base-font-family;
@@ -98,16 +103,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  padding-bottom: rem(250);
-  overflow: scroll;
+  padding-top: rem(10);
+  padding-bottom: rem(100);
+  overflow: auto;
   height: 100vh;
+  grid-gap: 0;
+  grid-auto-rows: min-content;
   @include mq("md") {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
   }
-}
-
-.navi-content {
-  max-height: rem(220);
 }
 
 .navi__box--a {

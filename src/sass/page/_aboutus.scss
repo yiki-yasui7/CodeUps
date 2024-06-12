@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.aboutus {
+.aboutus__space {
   margin-top: rem(80);
-  padding-bottom: rem(70);
+  // padding-bottom: rem(70);
   @include mq("md") {
     margin-top: rem(140);
-    padding-bottom: rem(95);
+    // padding-bottom: rem(95);
   }
 }
 

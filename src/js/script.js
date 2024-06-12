@@ -5,9 +5,11 @@ jQuery(function ($) {
     if ($(".js-hamburger").hasClass("is-open")) {
       $(".js-drawer-menu").fadeOut();
       $(this).removeClass("is-open");
+      $("body").css("overflow", "auto");
     } else {
       $(".js-drawer-menu").fadeIn();
       $(this).addClass("is-open");
+      $("body").css("overflow", "hidden");
     }
   });
 
@@ -35,8 +37,10 @@ jQuery(function ($) {
 
   var swiper = new Swiper(".js-mv-swiper", {
     loop: true,
-    slidesPerView: "auto",
-    autoplay: { delay: 2000 },
+
+    effect: "fade",
+    speed: 800,
+    autoplay: { delay: 3000 },
     pagination: {
       el: ".mv-pagination",
     },
