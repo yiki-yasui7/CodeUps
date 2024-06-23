@@ -11,11 +11,23 @@
 }
 
 .navi__inner {
-  padding-top: rem(5);
-  padding-right: rem(15);
-  padding-bottom: rem(15);
-  padding-left: rem(15);
   height: 100%;
+}
+
+.navi__menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  padding-top: rem(10);
+  padding-bottom: rem(100);
+  overflow: auto;
+  height: 100vh;
+  grid-gap: 0;
+  grid-auto-rows: min-content;
+  @include mq("md") {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
+  }
 }
 
 .navi__header {
@@ -60,7 +72,7 @@
   font-family: $base-font-family;
   letter-spacing: 0.05em;
   line-height: calc(18 / 16);
-  padding-bottom: rem(26);
+  margin-bottom: rem(26);
   display: block;
 }
 
@@ -71,7 +83,7 @@
   font-family: $base-font-family;
   letter-spacing: 0.01em;
   line-height: calc(18 / 16);
-  padding-bottom: rem(24);
+  margin-bottom: rem(24);
   font-size: rem(16);
 }
 
@@ -79,7 +91,7 @@
   /* 基本的に変更しないプロパティ */
   content: "";
   position: absolute;
-  top: 25%;
+  top: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -97,22 +109,6 @@
 
   /* 表示させるアイコンのパスを指定 */
   background-image: url(../images/common/starfish.png);
-}
-
-.navi__menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  padding-top: rem(10);
-  padding-bottom: rem(100);
-  overflow: auto;
-  height: 100vh;
-  grid-gap: 0;
-  grid-auto-rows: min-content;
-  @include mq("md") {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 0;
-  }
 }
 
 .navi__box--a {
