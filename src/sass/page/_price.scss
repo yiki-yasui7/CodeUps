@@ -39,8 +39,10 @@
 .price__wrapper {
   margin-top: rem(24);
   @include mq("md") {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-direction: row-reverse;
+    gap: rem(94);
     margin-top: rem(40);
   }
 }
@@ -50,9 +52,8 @@
   overflow: hidden;
   width: 100%;
   @include mq("md") {
-    width: 45.682451%;
-    margin-left: rem(94);
     aspect-ratio: 492 /746;
+    order: 2;
   }
 }
 
@@ -78,7 +79,7 @@
 
 .price-menu {
   @include mq("md") {
-    width: 45.682451%;
+    order: 1;
   }
 }
 

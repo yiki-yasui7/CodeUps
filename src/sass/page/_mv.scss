@@ -26,10 +26,10 @@
   font-weight: 400;
   letter-spacing: 0.54em;
   line-height: 1;
-  margin-left: rem(15);
+  text-indent: 0.975rem;
   @include mq(md) {
     font-size: rem(80);
-    margin-left: rem(48);
+    text-indent: rem(48);
   }
 }
 .mv__subtitle {

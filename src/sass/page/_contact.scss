@@ -18,17 +18,16 @@
   content: "";
   display: block;
   top: -1.5rem;
-  height: 11.3125rem;
+  height: 3.56rem;
   position: absolute;
   right: calc(50% - min(48.4vw, 38.625rem));
-  width: 7.125rem;
+  width: 6.9rem;
   z-index: 4;
   @include mq("md") {
     top: -2.5rem;
-    height: 18.3125rem;
-
+    height: 8.625rem;
     right: calc(50% - min(48.4vw, 42.625rem));
-    width: 19.5rem;
+    width: 19.1rem;
   }
 }
 
@@ -36,10 +35,7 @@
   @include mq("md") {
     display: flex;
     box-shadow: 4px 4px 10px 0px #00000040;
-
-    padding: 0 rem(50);
     justify-content: space-between;
-
     padding: rem(80) rem(100) rem(80) rem(35);
   }
 }

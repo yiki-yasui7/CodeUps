@@ -14,16 +14,17 @@
   overflow: hidden;
 }
 
-/* 前への矢印カスタマイズ */
-
 .swiper-button {
   @include mq("md") {
     position: absolute;
-    top: -1rem;
+    top: 0;
     right: rem(18);
     z-index: 5;
-    width: rem(260);
     height: rem(80);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
   }
 }
 
@@ -32,16 +33,18 @@
   @include mq("md") {
     width: rem(80);
     height: rem(80);
-    padding-top: 0;
+    margin: 0;
+    padding: 0;
+    position: unset;
   }
 }
 
-.swiper-button-prev::after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   display: none;
   @include mq("md") {
     display: block;
     content: "";
-    background-image: url(../images/common/swiper-button-prev.png);
     background-size: cover;
     width: rem(80);
     height: rem(80);
@@ -50,17 +53,12 @@
   }
 }
 
+.swiper-button-prev::after {
+  background-image: url(../images/common/swiper-button-prev.png);
+}
+
 .swiper-button-next::after {
-  display: none;
-  @include mq("md") {
-    display: block;
-    content: "";
-    background-image: url(../images/common/swiper-button-next.png);
-    background-size: cover;
-    width: rem(80);
-    height: rem(80);
-    z-index: 5;
-  }
+  background-image: url(../images/common/swiper-button-next.png);
 }
 
 .swiper-slide--mv {

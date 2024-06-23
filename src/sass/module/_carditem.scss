@@ -1,5 +1,16 @@
 @use "global" as *;
 
+.carditem-list {
+  display: grid;
+  margin-top: rem(30);
+  justify-content: center;
+  gap: rem(40);
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: rem(80);
+  }
+}
+
 .carditem__img {
   aspect-ratio: 345 / 227;
   overflow: hidden;
