@@ -1,12 +1,12 @@
 @use "global" as *;
 
-.footer-navi {
+.footer {
   background-color: #408f95;
   color: #fff;
   margin: auto;
 }
 
-.footer-navi__space {
+.footer__space {
   margin-top: rem(100);
   padding-top: rem(48);
   padding-bottom: rem(56);
@@ -18,14 +18,14 @@
   }
 }
 
-.footer-navi__inner {
+.footer__inner {
   padding: 0 rem(16);
   @include mq("md") {
     padding: 0 rem(25);
   }
 }
 
-.footer-navi__header {
+.footer__header {
   padding-bottom: rem(40);
   @include mq("md") {
     display: flex;
@@ -33,7 +33,7 @@
   }
 }
 
-.footer-navi__logo {
+.footer__logo {
   width: rem(120);
 
   @include mq("md") {
@@ -41,7 +41,7 @@
   }
 }
 
-.footer-navi-icon {
+.footer__icon {
   display: flex;
   margin-top: rem(16);
   @include mq("md") {
@@ -50,7 +50,7 @@
   }
 }
 
-.footer-navi-icon__link {
+.footer__icon-link {
   width: rem(24);
   margin-right: rem(14);
   @include mq("md") {
@@ -58,22 +58,22 @@
   }
 }
 
-.footer-navi-icon__link:hover {
+.footer__icon-link:hover {
   opacity: 0.7;
 }
 
-.footer-navi__items {
+.footer__items {
   margin-top: rem(36);
 }
-.footer-navi__items--no {
+.footer__items-no {
   margin-top: 0;
 }
 
-.footer-navi__items--right {
+.footer__items-right {
   margin-top: rem(16);
 }
 
-.footer-navi__item--top {
+.footer__item-top {
   position: relative;
   padding-left: 20px;
   font-weight: $bold;
@@ -83,11 +83,11 @@
   margin-bottom: rem(28);
 }
 
-.footer-navi__item--top:hover {
+.footer__item-top:hover {
   opacity: 0.5;
 }
 
-.footer-navi__item--top::before {
+.footer__item-top::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -102,7 +102,7 @@
   background-image: url(../images/common/starfish.png);
 }
 
-.footer-navi__item {
+.footer__item {
   margin-bottom: rem(24);
   margin-left: rem(22);
   font-weight: 300;
@@ -110,11 +110,11 @@
   line-height: calc(18 / 16);
 }
 
-.footer-navi__item:hover {
+.footer__item:hover {
   opacity: 0.5;
 }
 
-.footer-navi__item--last {
+.footer__item-last {
   padding-bottom: 0;
   margin-left: rem(22);
   font-weight: 300;
@@ -122,11 +122,11 @@
   line-height: calc(18 / 16);
 }
 
-.footer-navi__item--last:hover {
+.footer__item-last:hover {
   opacity: 0.5;
 }
 
-.footer-navi__menu {
+.footer__menu {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: rem(8);
@@ -136,11 +136,11 @@
   }
 }
 
-.footer-navi__box--a {
+.footer__box-a {
   order: 1;
 }
 
-.footer-navi__box--b {
+.footer__box-b {
   order: 3;
 
   @include mq("md") {
@@ -149,7 +149,7 @@
   }
 }
 
-.footer-navi__box--c {
+.footer__box-c {
   order: 2;
   padding-left: rem(10);
   @include mq("md") {
@@ -158,12 +158,12 @@
   }
 }
 
-.footer-navi__box--d {
+.footer__box-d {
   order: 4;
   padding-left: rem(10);
 }
 
-.footer-navi__item {
+.footer__item {
   font-size: rem(16);
 }
 

@@ -9,7 +9,6 @@
   width: 100%;
   background-color: rgba(13, 41, 54, 0.68);
   z-index: 10;
-  // opacity: 0.68;
   @include mq("md") {
     height: rem(90);
   }
@@ -35,7 +34,7 @@
   }
 }
 
-.header-logo__link {
+.header__logolink {
   max-width: rem(100);
   position: relative;
   aspect-ratio: 133 / 50;
@@ -46,7 +45,7 @@
   }
 }
 
-.header-logo__link img {
+.header__logolink img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -70,14 +69,6 @@
     display: none;
   }
 }
-
-// .header-sp-nav__items {
-//   height: 100vh;
-//   padding-top: 25rem;
-//   padding-bottom: 10rem;
-//   overflow: scroll;
-//   z-index: 2;
-// }
 
 .header-pc-nav {
   height: inherit;
@@ -106,7 +97,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // ↑3つを指定することでクリック領域が広がる
   flex-direction: column;
   padding-bottom: rem(4);
   font-size: rem(10);
@@ -116,23 +106,20 @@
 
 .header-pc-nav__item a::after {
   content: "";
-  /*絶対配置で線の位置を決める*/
   position: absolute;
   bottom: 20px;
   left: 0;
-  /*線の形状*/
   width: 100%;
   height: 1px;
   background: #fff;
-  /*アニメーションの指定*/
   transition: all 0.3s;
-  transform: scale(0, 1); /*X方向0、Y方向1*/
-  transform-origin: center top; /*上部中央基点*/
+  transform: scale(0, 1);
+  transform-origin: center top;
 }
 
 .header-pc-nav__item.current a::after,
 .header-pc-nav__item a:hover::after {
-  transform: scale(1, 1); /*X方向にスケール拡大*/
+  transform: scale(1, 1);
 }
 
 .header-pc-nav__item span {

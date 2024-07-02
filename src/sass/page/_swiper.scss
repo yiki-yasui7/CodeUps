@@ -1,19 +1,5 @@
 @use "global" as *;
 
-.swiper-slide--campain {
-  width: 100%;
-  max-width: rem(280);
-  height: auto;
-  @include mq("md") {
-    max-width: rem(333);
-  }
-}
-
-.swiper-container {
-  margin-right: calc(50% - 50vw);
-  overflow: hidden;
-}
-
 .swiper-button {
   @include mq("md") {
     position: absolute;
@@ -28,8 +14,8 @@
   }
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.swiper-button__prev,
+.swiper-button__next {
   @include mq("md") {
     width: rem(80);
     height: rem(80);
@@ -39,8 +25,8 @@
   }
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.swiper-button__prev::after,
+.swiper-button__next::after {
   display: none;
   @include mq("md") {
     display: block;
@@ -53,26 +39,10 @@
   }
 }
 
-.swiper-button-prev::after {
+.swiper-button__prev::after {
   background-image: url(../images/common/swiper-button-prev.png);
 }
 
-.swiper-button-next::after {
+.swiper-button__next::after {
   background-image: url(../images/common/swiper-button-next.png);
-}
-
-.swiper-slide--mv {
-  height: 100vh;
-  width: 100%;
-  aspect-ratio: 375 / 667;
-  overflow: hidden;
-  @include mq("md") {
-    aspect-ratio: 1440 / 768;
-  }
-}
-
-.swiper-slide--mv img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }

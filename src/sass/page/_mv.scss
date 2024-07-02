@@ -13,12 +13,6 @@
   width: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @include mq(md) {
-    width: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
 }
 .mv__title {
   font-family: "Lato", sans-serif;
@@ -41,4 +35,20 @@
   font-family: $english-family;
   @include mq("md") {
   }
+}
+
+.mv__swiper-slide {
+  height: 100vh;
+  width: 100%;
+  aspect-ratio: 375 / 667;
+  overflow: hidden;
+  @include mq("md") {
+    aspect-ratio: 1440 / 768;
+  }
+}
+
+.mv__swiper-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

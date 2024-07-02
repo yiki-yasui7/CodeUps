@@ -30,8 +30,8 @@ jQuery(function ($) {
     },
     // 戻るボタンと進むボタンの設定
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button__next",
+      prevEl: ".swiper-button__prev",
     },
   });
 

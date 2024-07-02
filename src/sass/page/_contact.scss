@@ -60,7 +60,7 @@
   }
 }
 
-.contact-address {
+.contact__address {
   text-align: center;
   margin-top: rem(16);
   @include mq("md") {
@@ -69,7 +69,7 @@
   }
 }
 
-.contact-address__text {
+.contact__address-text {
   font-size: rem(16);
   line-height: calc(24 / 16);
   margin-top: rem(4);
@@ -79,11 +79,11 @@
   }
 }
 
-.contact-address__text p {
+.contact__address-text p {
   margin-top: rem(4);
 }
 
-.contact-address__map {
+.contact__map {
   aspect-ratio: 295 / 160;
   margin-top: rem(16);
   @include mq("md") {
@@ -95,7 +95,7 @@
   }
 }
 
-.contact-address iframe {
+.contact__address iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;

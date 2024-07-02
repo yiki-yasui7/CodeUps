@@ -17,16 +17,25 @@
 
 .campaign__items {
   margin-top: rem(24);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
 
   @include mq("md") {
     margin-top: rem(40);
   }
 }
 
-.campaign__flexes {
+.campain__swiper-slide {
+  width: 100%;
+  max-width: rem(280);
+  height: auto;
   display: flex;
+  @include mq("md") {
+    max-width: rem(333);
+  }
 }
-.campaign__flex {
+
+.campaign__flexes {
   display: flex;
 }
 
@@ -117,7 +126,7 @@
   }
 }
 
-.campaign-card__price--before {
+.campaign-card__price-before {
   color: $black;
   font-weight: 800;
   text-decoration: line-through 3px solid #c94800;
@@ -132,7 +141,7 @@
   }
 }
 
-.campaign-card__price--after {
+.campaign-card__price-after {
   font-family: "Lato", sans-serif;
   font-size: rem(32);
   line-height: 1;

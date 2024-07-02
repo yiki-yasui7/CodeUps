@@ -34,10 +34,18 @@
 }
 
 .information__img {
+  aspect-ratio: 345 / 227;
+  overflow: hidden;
   @include mq("md") {
     width: 50%;
     max-width: rem(540);
   }
+}
+
+.information__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .information__textbody {
@@ -48,4 +56,36 @@
     margin-left: rem(48);
     margin-top: rem(58);
   }
+}
+
+.information__title {
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: calc(24 / 20);
+  letter-spacing: 0.01em;
+  padding-bottom: rem(2);
+  border-bottom: 1px solid $blue;
+  color: $black;
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: 1;
+    padding-bottom: rem(8);
+  }
+}
+
+.information__text {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  color: $black;
+  letter-spacing: 0.01em;
+  margin-top: rem(8);
+  font-weight: 400;
+  @include mq("md") {
+    letter-spacing: 0.005em;
+  }
+}
+
+.information__button {
+  text-align: center;
+  margin-top: rem(40);
 }
