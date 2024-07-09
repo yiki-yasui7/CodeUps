@@ -1,20 +1,14 @@
 @use "global" as *;
 
 .blog {
+  padding-top: rem(83);
   @include mq("md") {
+    padding-top: rem(100);
     background-image: url(../images/common/blog.png);
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: 100% 60%;
     z-index: -1;
-  }
-}
-
-.blog__space {
-  margin-top: rem(83);
-  @include mq("md") {
-    padding-top: rem(100);
-    margin-top: 0;
   }
 }
 

@@ -2,14 +2,9 @@
 
 .price {
   background-color: #ddf0f1;
-}
-
-.price__space {
-  margin-top: rem(80);
   padding-top: rem(80);
   padding-bottom: rem(80);
   @include mq("md") {
-    margin-top: rem(145);
     padding-top: rem(100);
     padding-bottom: rem(100);
   }

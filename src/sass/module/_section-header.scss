@@ -35,66 +35,34 @@
   }
 }
 
-.section-header--contact {
-  text-align: center;
-}
-
 .section-header__entitle--contact {
   font-size: rem(80);
-  font-weight: bold;
   letter-spacing: 0.001em;
   line-height: 1;
-  font-family: $english-family;
   font-weight: 300;
-}
-
-.section-header__entitle--contact::first-letter {
-  color: $blue;
+  @include mq("md") {
+    font-size: rem(80);
+  }
 }
 
 .section-header__jatitle--contact {
-  font-size: rem(12);
-  font-weight: bold;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  font-family: $english-family;
-  font-weight: 300;
-  color: $blue;
   margin-top: 0;
 }
 
 .section-header__entitle--white {
-  font-size: rem(32);
-  font-weight: bold;
-  letter-spacing: 0.01em;
-  line-height: calc(40 / 32);
-  font-family: $english-family;
-  font-weight: 500;
   @include mq(md) {
-    font-size: rem(40);
     color: #fff;
   }
 }
 
 .section-header__entitle--white::first-letter {
-  color: $blue;
   @include mq("md") {
     color: #fff;
   }
 }
 
 .section-header__jatitle--white {
-  font-size: rem(12);
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  line-height: calc(18 / 12);
-  color: $blue;
-  font-family: $base-font-family;
-  font-weight: 400;
-  margin-top: rem(4);
-
   @include mq("md") {
-    margin-top: rem(8);
     color: #fff;
   }
 }

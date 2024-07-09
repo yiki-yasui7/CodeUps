@@ -1,14 +1,5 @@
 @use "global" as *;
 
-.aboutus__space {
-  margin-top: rem(80);
-  // padding-bottom: rem(70);
-  @include mq("md") {
-    margin-top: rem(140);
-    // padding-bottom: rem(95);
-  }
-}
-
 .aboutus__body {
   position: relative;
   margin-top: rem(28);

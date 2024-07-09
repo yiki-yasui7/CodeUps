@@ -4,13 +4,6 @@
   overflow: hidden;
 }
 
-.campaign__space {
-  margin-top: rem(40);
-  @include mq("md") {
-    margin-top: rem(115);
-  }
-}
-
 .campaign__inner {
   position: relative;
 }
@@ -169,4 +162,51 @@
 
 .campaign .swiper-wrapper {
   padding-bottom: rem(10);
+}
+
+.campaign__swiper-button {
+  @include mq("md") {
+    position: absolute;
+    top: 0;
+    right: rem(18);
+    z-index: 5;
+    height: rem(80);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+}
+
+.campaign__swiper-button-prev,
+.campaign__swiper-button-next {
+  @include mq("md") {
+    width: rem(80);
+    height: rem(80);
+    margin: 0;
+    padding: 0;
+    position: unset;
+  }
+}
+
+.campaign__swiper-button-prev::after,
+.campaign__swiper-button-next::after {
+  display: none;
+  @include mq("md") {
+    display: block;
+    content: "";
+    background-size: cover;
+    width: rem(80);
+    height: rem(80);
+    z-index: 5;
+    object-fit: cover;
+  }
+}
+
+.campaign__swiper-button-prev::after {
+  background-image: url(../images/common/swiper-button-prev.png);
+}
+
+.campaign__swiper-button-next::after {
+  background-image: url(../images/common/swiper-button-next.png);
 }

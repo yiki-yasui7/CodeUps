@@ -1,12 +1,5 @@
 @use "global" as *;
 
-.contact__space {
-  margin-top: rem(80);
-  @include mq("md") {
-    margin-top: rem(140);
-  }
-}
-
 .contact__inner {
   padding: 0 rem(15) 0 rem(30);
   position: relative;
